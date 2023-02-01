@@ -5,14 +5,13 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>E-shop</title>
     <link href="./style/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/241629e98c.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-
-    <link href="./style/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -29,24 +28,17 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#">Catalog</a>
-
-                    <!--                    сделать выпадающее меню-->
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">CATALOG</a>
+                    <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Phones</a></li>
+                        <li><a class="dropdown-item" href="#">Headphones</a></li>
+                        <li><a class="dropdown-item" href="#">Laptops</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#">News</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#">News</a>
-                </li>
+<!--                    <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">Catalog</a>
+                    </li>-->
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#">News</a>
                 </li>
@@ -339,5 +331,6 @@
 </footer>
 
 <script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
