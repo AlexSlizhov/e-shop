@@ -2,16 +2,15 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>E-shop</title>
-    <link rel="stylesheet" href="./style/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="./style/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/241629e98c.js" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/241629e98c.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-
 
     <link href="./style/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -19,8 +18,9 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">E-Shop</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,6 +30,22 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#">Catalog</a>
+
+                    <!--                    сделать выпадающее меню-->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">News</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#">News</a>
@@ -39,27 +55,29 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown dropdown-toggle" data-bs-toggle="dropdown"
                        href="#"><i class="fa-regular fa-user"></i></a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Регистрация</a></li>
                         <li><a class="dropdown-item" href="#">Авторизация</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modal-cart">
+                    <a class="nav-link" data-bs-target="#modal-cart" data-bs-toggle="modal" href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
-                    <div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="modal-cart"
+                         tabindex="-1">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header bg-warning text-dark">
                                     <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
+                                            type="button"></button>
                                 </div>
                                 <div class="modal-body">
                                     <table class="table">
                                         <tbody>
                                         <tr>
-                                            <td><img src="img/items/iPhone.png" alt="img"></td>
+                                            <td><img alt="img" src="img/items/iPhone.png"></td>
                                             <td><a href="#">Apple iPhone 14 Pro Max</a></td>
                                             <td>5999 p.</td>
                                             <td>1</td>
@@ -80,8 +98,9 @@
                                     </table>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close
+                                    </button>
+                                    <button class="btn btn-primary" type="button">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -95,38 +114,45 @@
     </div>
 </nav>
 <div class="container-fluid my-carousel">
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
-    data-bs-interval="5000">
+    <div class="carousel slide carousel-fade" data-bs-interval="5000" data-bs-ride="carousel"
+         id="carouselExampleIndicators">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+                    data-bs-target="#carouselExampleIndicators" type="button"></button>
+            <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
+            <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
+            <button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
+            <button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/slider/slide_1.jpg" class="d-block w-100" alt="...">
+                <img alt="..." class="d-block w-100" src="./img/slider/slide_1.jpg">
             </div>
             <div class="carousel-item">
-                <img src="./img/slider/slide_2.jpg" class="d-block w-100" alt="...">
+                <img alt="..." class="d-block w-100" src="./img/slider/slide_2.jpg">
             </div>
             <div class="carousel-item">
-                <img src="./img/slider/slide_3.jpg" class="d-block w-100" alt="...">
+                <img alt="..." class="d-block w-100" src="./img/slider/slide_3.jpg">
             </div>
             <div class="carousel-item">
-                <img src="./img/slider/slide_4.jpg" class="d-block w-100" alt="...">
+                <img alt="..." class="d-block w-100" src="./img/slider/slide_4.jpg">
             </div>
             <div class="carousel-item">
-                <img src="./img/slider/slide_5.jpg" class="d-block w-100" alt="...">
+                <img alt="..." class="d-block w-100" src="./img/slider/slide_5.jpg">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators"
+                type="button">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators"
+                type="button">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -137,29 +163,29 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="product-card">
                     <div class="product-thumb">
-                        <a href="#"><img src="img/items/iPhone.png" alt="..."> </a>
+                        <a href="#"><img alt="..." src="img/items/iPhone.png"> </a>
                     </div>
-                        <div class="product-details">
-                            <h4><a href="#">Apple iPhone 14 Pro Max</a></h4>
-                            <p>Apple iOS, экран 6.7" OLED (1290x2796) 120 Гц,<br>
-                                Apple A16 Bionic, ОЗУ 6 ГБ, память 128 ГБ.
-                            </p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>6820p.</small>6199p.
-                                </div>
-                                <div class="product-links">
-                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                </div>
+                    <div class="product-details">
+                        <h4><a href="#">Apple iPhone 14 Pro Max</a></h4>
+                        <p>Apple iOS, экран 6.7" OLED (1290x2796) 120 Гц,<br>
+                            Apple A16 Bionic, ОЗУ 6 ГБ, память 128 ГБ.
+                        </p>
+                        <div class="product-bottom-details d-flex justify-content-between">
+                            <div class="product-price">
+                                <small>6820p.</small>6199p.
+                            </div>
+                            <div class="product-links">
+                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
                 <div class="product-card">
                     <div class="product-thumb">
-                        <a href="#"><img src="img/items/AirPods.png" alt="..."> </a>
+                        <a href="#"><img alt="..." src="img/items/AirPods.png"> </a>
                     </div>
                     <div class="product-details">
                         <h4><a href="#">Apple AirPods PRO 2</a></h4>
@@ -181,7 +207,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="product-card">
                     <div class="product-thumb">
-                        <a href="#"><img src="img/items/MacBook.png" alt="..."> </a>
+                        <a href="#"><img alt="..." src="img/items/MacBook.png"> </a>
                     </div>
                     <div class="product-details">
                         <h4><a href="#">Apple MacBooK Air 13"</a></h4>
@@ -203,7 +229,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="product-card">
                     <div class="product-thumb">
-                        <a href="#"><img src="img/items/Samsung.png" alt="..."> </a>
+                        <a href="#"><img alt="..." src="img/items/Samsung.png"> </a>
                     </div>
                     <div class="product-details">
                         <h4><a href="#">Samsung Galaxy S22 Ultra</a></h4>
@@ -225,7 +251,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="product-card">
                     <div class="product-thumb">
-                        <a href="#"><img src="img/items/Sony.png" alt="..."> </a>
+                        <a href="#"><img alt="..." src="img/items/Sony.png"> </a>
                     </div>
                     <div class="product-details">
                         <h4><a href="#">Sony WH-1000XM4</a></h4>
@@ -247,7 +273,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="product-card">
                     <div class="product-thumb">
-                        <a href="#"><img src="img/items/Asus.png" alt="..."> </a>
+                        <a href="#"><img alt="..." src="img/items/Asus.png"> </a>
                     </div>
                     <div class="product-details">
                         <h4><a href="#">Asus Pro Art Studiobook 16"</a></h4>
@@ -300,19 +326,19 @@
                     </ul>
                 </div>
                 <div class="col-md-3 col-6">
-                <h4>Мы в сети</h4>
-                <div class="footer-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <h4>Мы в сети</h4>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         </div>
     </section>
 </footer>
 
-<script src="./js/bootstrap.min.js"> </script>
+<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
